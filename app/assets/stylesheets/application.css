@@ -13,3 +13,79 @@
  *= require_tree .
  *= require_self
  */
+
+/*** The new CSS Reset - version 1.2.0 (last updated 23.7.2021) ***/
+
+/* Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property */
+*:where(:not(iframe, canvas, img, svg, video):not(svg *)) {
+  all: unset;
+  display: revert;
+}
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+  Remove list styles (bullets/numbers)
+  in case you use it with normalize.css
+*/
+ol, ul {
+  list-style: none;
+}
+
+/* For images to not be able to exceed their container */
+img {
+  max-width: 100%;
+}
+
+/* Removes spacing between cells in tables */
+table {
+  border-collapse: collapse;
+}
+
+/* Revert the 'white-space' property for textarea elements on Safari */
+textarea {
+  white-space: revert;
+}
+
+/*** The new CSS Reset - version 1.2.0 (last updated 23.7.2021) ***/
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.row {
+  display: flex;
+}
+
+.page-title {
+  text-align: center;
+  background-color: #f8f8f8;
+}
+
+.page-title h1 {
+  color: #333333;
+  font-size: 60px;
+  margin: 0;
+  font-family: Lato,Arial, Helvetica, sans-serif;
+  font-weight: 700;
+}
+
+.page-title .col {
+  width: 100%;
+}
+
+main {
+  background-color: aqua;
+}
+
+footer {
+  background-color: blueviolet;
+}

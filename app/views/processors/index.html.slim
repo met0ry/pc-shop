@@ -1,0 +1,28 @@
+.page-title
+  .container
+    .row
+      .col
+        .entry-header
+          h1 CPU (Processor)
+
+.main-content
+  .container
+    .row
+      .sidebar 1
+      .content-area 
+        .products-header
+        .products
+          - @processors.each do |processor|
+            .product
+              .product-image
+                img src="https://primeabgb-cdn.sgp1.digitaloceanspaces.com/wp-content/uploads/2021/06/AMD-Ryzen-3-3200G-Open-Box-OEM-Processor-with-Stock-cooler-300x300.jpg"
+              .product-info
+                .product-info-rating
+                  .product-title
+                    = processor.tag
+                .product-info-price
+                 
+
+
+- @processors.map do |x|
+   = x

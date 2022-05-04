@@ -1,0 +1,33 @@
+doctype html
+html
+  head
+    title
+      | PcShop
+    meta[name="viewport" content="width=device-width,initial-scale=1"]
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
+  body
+    header
+      .header-topbar
+        .container
+          .row
+            span.welcome-message Welcome to Our Store!
+      .header-main
+        .container
+          .row
+            .header-main-logo
+              = image_tag "logo.png"
+            .header-main-search searchbar
+            .header-main-user-info userinfo
+
+      .header-navigation
+        .container
+          .row
+            .header-navigation-dropdown drowdown search
+          // ????
+    main
+      = yield
+    footer
+
