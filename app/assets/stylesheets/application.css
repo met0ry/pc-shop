@@ -54,6 +54,13 @@ textarea {
 
 /*** The new CSS Reset - version 1.2.0 (last updated 23.7.2021) ***/
 
+body {
+  font-family: Lato,Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .container {
   max-width: 1200px;
   width: 100%;
@@ -71,19 +78,17 @@ textarea {
 }
 
 .page-title h1 {
-  color: #333333;
   font-size: 60px;
   margin: 0;
-  font-family: Lato,Arial, Helvetica, sans-serif;
   font-weight: 700;
+}
+
+h1 {
+  color: #333333;
 }
 
 .page-title .col {
   width: 100%;
-}
-
-main {
-  background-color: aqua;
 }
 
 footer {

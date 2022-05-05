@@ -47,11 +47,17 @@ PowerSupply.create(sku: 'CP-9020201-IN', brand: 'Corsair', tag: 'Corsair RM1000x
 Processor.create(sku: 'Ryzen 5 3600', brand: 'AMD', tag: 'AMD Ryzen 5 3600 3rd Gen Desktop Processor 100-100000031BOX',
                  processor_series: 'Ryzen 5', socket_type: 'Socket AM4', cores: 6, threads: 12, base_frequency: 3.6, price: 6599)
 
+Processor.last.photo.attach(io: File.open('app/assets/images/Processor-1.jpg'), filename: 'Processor-1.jpg', content_type: 'image/jpg')
+
 Processor.create(sku: 'Ryzen 3 3200G', brand: 'AMD', tag: 'AMD Ryzen 3 3200G with Radeon Vega 8 Graphics 3rd Gen Desktop Processor YD3200C5FHBOX',
                  processor_series: 'Ryzen 3', socket_type: 'Socket AM4', cores: 4, threads: 4, base_frequency: 3.6, price: 4999)
 
+Processor.last.photo.attach(io: File.open('app/assets/images/Processor-2.jpg'), filename: 'Processor-2.jpg', content_type: 'image/jpg')
+
 Processor.create(sku: 'i5-10400F', brand: 'Intel', tag: 'Intel 10th Gen Comet Lake Core i5-10400F Processor 12M Cache, up to 4.30 GHz',
                  processor_series: 'Comet Lake', socket_type: 'LGA 1200', cores: 6, threads: 12, base_frequency: 2.90, price: 8999)
+
+Processor.last.photo.attach(io: File.open('app/assets/images/Processor-3.jpg'), filename: 'Processor-3.jpg', content_type: 'image/jpg')
 
 ############################################################
 

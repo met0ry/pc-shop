@@ -30,4 +30,21 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  buttons:
+    save: "Save"
+    cancel: "Cancel"
+  product:
+    base:
+      sku: "Sku"
+      brand: "Brand"
+      tag: "Tag"
+      warranty: "Warranty"
+      price: "Price"
+      photo: "Photo"
+    processor:
+      processor_series: "Processor series" 
+      socket_type: "Socket type" 
+      cores: "Cores" 
+      threads: "Threads" 
+      base_frequency: "Base frequency" 
+
