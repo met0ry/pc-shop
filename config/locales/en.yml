@@ -46,5 +46,14 @@ en:
       socket_type: "Socket type" 
       cores: "Cores" 
       threads: "Threads" 
-      base_frequency: "Base frequency" 
+      base_frequency: "Base frequency"
+    order_by:
+      latest: "Sort by latest"
+      low_price: "Sort by price: low to high"
+      high_price: "Sort by price: high to low"
+  pagy:
+    nav:
+      prev: "Previous"
+      next: "Next"
+      gap: "…"
 

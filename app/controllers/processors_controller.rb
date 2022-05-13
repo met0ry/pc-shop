@@ -1,6 +1,6 @@
 class ProcessorsController < ApplicationController
   def index
-    @processors = Processor.all
+    @pagy, @processors = pagy(Processor.search(params))
   end
 
   def show

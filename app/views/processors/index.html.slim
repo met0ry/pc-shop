@@ -4,13 +4,18 @@
       .col
         .entry-header
           h1 CPU (Processor)
-
 .main-content
   .container
     .row
       .sidebar 1
-      .content-area 
+      .products-content-area 
         .products-header
+          .products-header-left
+            p.products-header-count == pagy_info(@pagy)
+          .products-header-right
+            // fix add locals path
+            = render partial: 'shared/products/product-show'
+            = render partial: 'shared/products/product-sort-field'
         .products
           - @processors.each do |processor|
             .product
@@ -25,3 +30,5 @@
                   .product-info-price
                       = processor.price 
                       |  ₴ 
+        .product-pagination
+          = render partial: 'shared/pagination', locals: { pagy: @pagy }

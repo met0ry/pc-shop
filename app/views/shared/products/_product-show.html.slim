@@ -1,0 +1,5 @@
+.product-show
+  span Show:
+  - [4,8,12].each do |x|
+    = link_to_unless_current x, processors_path(items: x) 
+    // TODO rework
