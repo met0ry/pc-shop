@@ -36,13 +36,14 @@ en:
   product:
     index:
       header:
-        graphic_card: "Graphic Cards (GPU)"
+        graphiccard: "Graphic Cards (GPU)"
         motherboard: "Motherboards"
-        power_supply: "Power Supplies (SMPS)"
+        powersupply: "Power Supplies (SMPS)"
         processor: "CPU (Processor)"
         ram: "RAM (Memory)"
         ssd: "Solid-state drive (SSD)"
-
+    show:
+      desc: "Description"
     base:
       sku: "Sku"
       brand: "Brand"

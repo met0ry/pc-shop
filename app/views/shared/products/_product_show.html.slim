@@ -1,0 +1,27 @@
+.container
+  .row
+    .product-main
+      .product-header
+        .product-big-photo
+          = image_tag(url_for(item.photo))
+        .product-header-info
+          h1.product-title = item.tag
+          p.product-price = item.price
+          .buy-form        
+      .product-description
+        h2 = t('product.show.desc') + " :"
+        table
+          tbody
+            tr
+              td = t('product.base.sku')
+              td = item.sku
+            tr
+              td = t('product.base.brand')
+              td = item.brand
+            - class_name::FILTER_FIELDS.each do |field|
+              tr
+                td = t("product.processor.#{field}")
+                td = item.send(field)
+            tr
+              td = t('product.base.warranty')
+              td = item.warranty
