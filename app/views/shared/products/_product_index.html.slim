@@ -1,0 +1,35 @@
+.page-title
+  .container
+    .row
+      .col
+        .entry-header
+          h1 = t("product.index.header.#{class_name.to_s.downcase}")
+.main-content
+  .container
+    .row
+      .sidebar 
+        = render partial: "shared/products/product-filter", locals: { filtering_fields: class_name.filtering_fields }
+      .products-content-area 
+        .products-header
+          .products-header-left
+            p.products-header-count == pagy_info(@pagy)
+          .products-header-right
+            // fix add locals path
+            = render partial: 'shared/products/product-show'
+            = render partial: 'shared/products/product-sort-field'
+        .products
+          - items.each do |item|
+            .product
+              .product-wrapper
+                .product-image
+                  - if item.photo.attached?
+                    = image_tag(url_for(item.photo))
+                .product-info
+                  .product-info-rating
+                    .product-title
+                      = item.tag
+                  .product-info-price
+                      = item.price 
+                      |  ₴ 
+        .product-pagination
+          = render partial: 'shared/pagination', locals: { pagy: @pagy }

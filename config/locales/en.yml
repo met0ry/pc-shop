@@ -34,6 +34,15 @@ en:
     save: "Save"
     cancel: "Cancel"
   product:
+    index:
+      header:
+        graphic_card: "Graphic Cards (GPU)"
+        motherboard: "Motherboards"
+        power_supply: "Power Supplies (SMPS)"
+        processor: "CPU (Processor)"
+        ram: "RAM (Memory)"
+        ssd: "Solid-state drive (SSD)"
+
     base:
       sku: "Sku"
       brand: "Brand"
