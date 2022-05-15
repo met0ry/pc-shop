@@ -1,3 +1,5 @@
 class Ram < ActiveRecord::Base
-  validates :sku, :brand, :tag, :memory_series, :memory_type, :size, :speed, :price, presence: true
+  include BaseProduct
+
+  validates :memory_series, :memory_type, :size, :speed, presence: true
 end

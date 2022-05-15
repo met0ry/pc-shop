@@ -3,12 +3,12 @@
     .row
       .col
         .entry-header
-          h1 CPU (Processor)
+          h1 Graphic Card
 .main-content
   .container
     .row
       .sidebar 
-        = render partial: "shared/products/product-filter", locals: { filtering_fields: Processor.filtering_fields }
+        = render partial: "shared/products/product-filter", locals: { filtering_fields: GraphicCard.filtering_fields }
       .products-content-area 
         .products-header
           .products-header-left
@@ -18,18 +18,18 @@
             = render partial: 'shared/products/product-show'
             = render partial: 'shared/products/product-sort-field'
         .products
-          - @processors.each do |processor|
+          - @graphic_cards.each do |graphic_card|
             .product
               .product-wrapper
                 .product-image
-                  - if processor.photo.attached?
-                    = image_tag(url_for(processor.photo))
+                  / - if graphic_card&.photo&.attached?
+                  /   = image_tag(url_for(graphic_card.photo))
                 .product-info
                   .product-info-rating
                     .product-title
-                      = processor.tag
+                      = graphic_card.tag
                   .product-info-price
-                      = processor.price 
+                      = graphic_card.price 
                       |  ₴ 
         .product-pagination
           = render partial: 'shared/pagination', locals: { pagy: @pagy }

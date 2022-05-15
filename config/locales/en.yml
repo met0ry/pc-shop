@@ -51,6 +51,8 @@ en:
       latest: "Sort by latest"
       low_price: "Sort by price: low to high"
       high_price: "Sort by price: high to low"
+    filters:
+      warranty: "%{count} years"
   pagy:
     nav:
       prev: "Previous"

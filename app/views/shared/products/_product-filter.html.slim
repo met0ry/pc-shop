@@ -1,0 +1,11 @@
+#product-filter
+  - filtering_fields.each do |filter|
+    .product-filter-field
+      .product-filter-field-head
+        h3 = t("product.processor.#{filter[:field].to_s}")
+      .product-filter-field-body class=('display' if params[filter[:field]].present?)
+        ul
+          - filter[:available_filters].each do |available_filter|
+            li
+              input id="#{filter[:field]}_filter_#{available_filter}" type="checkbox" value="#{available_filter}" checked=('checked' if filter_is_checked?(filter[:field], available_filter))
+              label for="#{filter[:field]}_filter_#{available_filter}" = available_filter_text(field_name: filter[:field], filter: available_filter)

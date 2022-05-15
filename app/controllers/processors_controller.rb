@@ -12,7 +12,6 @@ class ProcessorsController < ApplicationController
   end
 
   def create
-    byebug
     Processor.create(permitted_params)
   end
 
