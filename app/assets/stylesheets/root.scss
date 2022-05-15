@@ -110,6 +110,8 @@
 .sidebar {
   width: 25%;
   padding-top: 10px;
+  padding-right: 15px;
+  padding-left: 15px;
 
   #product-filter {
     .product-filter-field {
@@ -118,6 +120,16 @@
           font-weight: 700;
           font-size: 14px;
           color: #333333;
+          position: relative;
+        }
+
+        i {
+          position: absolute;
+          right: 0;
+          line-height: inherit;
+          font-size: 25px;
+          cursor: pointer;
+          top: -5px;
         }
         margin-bottom: 10px;
       }
@@ -184,6 +196,7 @@
         color: #555555;
         font-size: 14px;
         user-select: none;
+        margin-left: 15px;
 
         .selected {
           position: relative;

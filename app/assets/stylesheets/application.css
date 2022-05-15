@@ -12,6 +12,7 @@
  *
  *= require_tree .
  *= require_self
+ *= require font-awesome
  */
 
 /*** The new CSS Reset - version 1.2.0 (last updated 23.7.2021) ***/

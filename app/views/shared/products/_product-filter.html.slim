@@ -2,7 +2,9 @@
   - filtering_fields.each do |filter|
     .product-filter-field
       .product-filter-field-head
-        h3 = t("product.processor.#{filter[:field].to_s}")
+        h3 
+          = t("product.processor.#{filter[:field].to_s}")
+          i class=(params[filter[:field]].present? ? "fa fa-angle-up" : "fa fa-angle-down")
       .product-filter-field-body class=('display' if params[filter[:field]].present?)
         ul
           - filter[:available_filters].each do |available_filter|

@@ -17,7 +17,21 @@ $(document).ready(function() {
 
 $(document).ready(function() {
   $("#product-filter .product-filter-field .product-filter-field-head").on("click", function(e) {
+    if ($(e.target.children).hasClass("fa-angle-up")) {
+      $(e.target.children).removeClass("fa-angle-up").addClass("fa-angle-down")
+    } else {
+      $(e.target.children).removeClass("fa-angle-down").addClass("fa-angle-up")
+    }
     $(e.target.parentElement.nextSibling).toggle();
+  });
+
+  $("#product-filter .product-filter-field .product-filter-field-head i").on("click", function(e) {
+    if ($(this).hasClass("fa-angle-up")) {
+      $(this).removeClass("fa-angle-up").addClass("fa-angle-down")
+    } else {
+      $(this).removeClass("fa-angle-down").addClass("fa-angle-up")
+    }
+    $(e.target.parentElement.parentElement.nextSibling).toggle();
   });
 
   $("#product-filter .product-filter-field .product-filter-field-body ul li input").change(function(e) {
