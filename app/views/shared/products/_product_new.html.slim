@@ -1,0 +1,46 @@
+.container
+  = form_for(item) do |f|
+    .form-fields
+      .field
+        .label
+          = label_tag :sku, t('product.base.sku')
+        .input-text
+          = text_field_tag :sku 
+
+      .field
+        .label
+          = label_tag :brand, t('product.base.brand')
+        .input-text
+          = text_field_tag :brand 
+
+      .field
+        .label
+          = label_tag :tag, t('product.base.tag')
+        .input-area
+          = text_area_tag :tag, nil, size:'35x10'
+
+      - class_name::FILTER_FIELDS.each do |field|
+        .field
+          .label
+            = label_tag field, t("product.processor.#{field}")
+          .input-text
+            = text_field_tag field
+      .field
+        .label
+          = label_tag :warranty, t('product.base.warranty')
+        .input-text
+          = text_field_tag :warranty 
+
+      .field
+        .label
+          = label_tag :price, t('product.base.price')
+        .input-text
+          = text_field_tag :price
+
+      .field
+          = label_tag :photo, t('product.base.photo')
+          = f.file_field :photo
+
+
+
+    = submit_tag t('buttons.save'), class: 'button-save'

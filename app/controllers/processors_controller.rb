@@ -1,4 +1,4 @@
-class ProcessorsController < ApplicationController
+class ProcessorsController < BaseProductController
   def index
     @pagy, @processors = pagy(Processor.search(params))
   end
@@ -12,12 +12,20 @@ class ProcessorsController < ApplicationController
   end
 
   def create
-    Processor.create(permitted_params)
+    @processor = Processor.new(permitted_params)
+
+    if @processor.save
+      # flash[:success] = 'Channel successfully created.'
+      redirect_to processor_path(@processor)
+    else
+      # flash[:danger] = 'Failed to create channel.'
+      render :new
+    end
   end
 
-  private 
+  private
 
-  def permitted_params
-    params.permit(:sku, :brand, :tag, :processor_series, :socket_type, :cores, :threads, :base_frequency, :warranty, :price, :photo).merge(params.require(:processor).permit(:photo))
+  def class_name
+    Processor
   end
 end

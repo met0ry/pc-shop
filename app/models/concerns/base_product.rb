@@ -65,10 +65,15 @@ module BaseProduct
       scope.map(&field_name).uniq
     end
 
+    def all_fields
+      self::FILTER_FIELDS + BASE_FIELDS
+    end
+
     # def warranty_filters(scope)
     #   scope.map(&:warranty).uniq.map { |x| x / 12}
     # end
   end
 
   BASE_FILTER_FIELDS = [:brand, :warranty] # add price
+  BASE_FIELDS = [:sku, :brand, :tag, :warranty, :price, :photo]
 end
