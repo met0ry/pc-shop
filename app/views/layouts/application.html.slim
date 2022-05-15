@@ -40,8 +40,25 @@ html
       .header-navigation
         .container
           .row
-            .header-navigation-dropdown drowdown search
-          // ????
+            .header-navigation-dropdown
+              .header-navigation-title
+                span.title = t("header.menu.title")
+                i class="fa fa-bars"
+              .header-navigation-menu
+                ul
+                  li
+                    = link_to t("header.menu.items.processor"), processors_path
+                  li
+                    = link_to t("header.menu.items.graphic_card"), graphic_cards_path
+                  li
+                    = link_to t("header.menu.items.power_supply"), power_supplies_path
+                  li
+                    = link_to t("header.menu.items.motherboard"), motherboards_path
+                  li
+                    = link_to t("header.menu.items.ram"), rams_path
+                  li
+                    = link_to t("header.menu.items.ssd"), ssds_path
+
     main
       = yield
     footer

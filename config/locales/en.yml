@@ -33,6 +33,16 @@ en:
   buttons:
     save: "Save"
     cancel: "Cancel"
+  header: 
+    menu:
+      title: "Shop By Categories"
+      items:
+        graphic_card: "Graphic Cards (GPU)"
+        motherboard: "Motherboards"
+        power_supply: "Power Supplies"
+        processor: "Processors"
+        ram: "RAMs"
+        ssd: "SSDs"
   product:
     index:
       header:
