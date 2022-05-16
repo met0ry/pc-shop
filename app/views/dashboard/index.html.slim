@@ -1,0 +1,33 @@
+.dashboard-index
+  .container
+    .row.first-ad-row
+      .first-adv
+        .first-ad-left
+          = image_tag('first-ad-left')
+        .first-ad-right
+          = image_tag('first-ad-right-top')
+          = image_tag('first-ad-right-bottom')
+    .row.second-ad-row
+      .second-ad
+      = image_tag('second-ad')
+    .row.clients-row
+      h2 = t('dashboard.index.clients.title')
+    .row.clients-reviews-row
+      .client-review
+        .client-review-desc = t('dashboard.index.clients.review')
+        .client-review-name Keshav Das
+      .client-review
+        .client-review-desc = t('dashboard.index.clients.review')
+        .client-review-name Keshav Das
+      .client-review
+        .client-review-desc = t('dashboard.index.clients.review')
+        .client-review-name Keshav Das
+      .client-review
+        .client-review-desc = t('dashboard.index.clients.review')
+        .client-review-name Keshav Das
+    .row.third-ad-row
+      = image_tag('third-ad')
+      
+        
+
+    

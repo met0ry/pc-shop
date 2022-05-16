@@ -8,7 +8,6 @@ html
     = csp_meta_tag
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
-    // place below and fix
   body
     p class="notice" = notice
     p class="alert" = alert
@@ -21,21 +20,25 @@ html
         .container
           .row
             .header-main-logo
-              = image_tag "logo.png"
-            .header-main-search searchbar
-            .header-main-user-info 
-              p.navbar-text.float-right
-                - if user_signed_in?
-                  | Logged in as 
-                  = current_user.email
-                  .navbar-link
-                    = link_to 'Edit profile', edit_user_registration_path
-                    br
-                    = link_to "Logout", destroy_user_session_path, method: :delete
-                - else
-                  .navbar-link
-                    | Hello, 
-                    = link_to "Sign in", new_user_registration_path
+              = link_to(root_path) do 
+                = image_tag "logo.png"
+            .header-main-search 
+              = render partial: "layouts/dashboard_search" 
+            .header-main-user-info
+              = render partial: "layouts/dashboard_login" 
+              .user-info-cart
+              / p.navbar-text.float-right
+              /   - if user_signed_in?
+              /     | Logged in as 
+              /     = current_user.email
+              /     .navbar-link
+              /       = link_to 'Edit profile', edit_user_registration_path
+              /       br
+              /       = link_to "Logout", destroy_user_session_path, method: :delete
+              /   - else
+              /     .navbar-link
+              /       | Hello, 
+              /       = link_to "Sign in", new_user_registration_path
 
       .header-navigation
         .container

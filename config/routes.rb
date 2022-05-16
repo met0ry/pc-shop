@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  root 'home#index'
-  
+  root 'dashboard#index'
+  get '/search', to: 'dashboard#search'
+
   resources :graphic_cards
   resources :motherboards
   resources :power_supplies

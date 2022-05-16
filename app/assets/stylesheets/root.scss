@@ -1,18 +1,106 @@
-.header {
+header {
   .header-main {
     height: 100px;
   }
 
   .header-main-logo {
+    cursor: pointer;
     width: 25%;
   }
 
+
+
   .header-main-search {
     width: 50%;
+    display: flex;
+    align-items: center;
+
+    form {
+      width: 100%;
+      display: flex;
+    }
+
+    input#query {
+      width: 80%;
+      height: 40px;
+      font-size: 14px;
+      line-height: 100%;
+      padding: 10px 15px;
+      margin: 0;
+      background: #fff;
+      border: 1px solid #ddd;
+      box-sizing: border-box;
+      
+      &::placeholder {
+        color: #999;
+        font-weight: 400;
+        font-style: italic;
+        line-height: normal;
+      }
+    }
+
+    .button-search {
+      width: 20%;
+      text-shadow: 0 -1px 0 rgba(0,0,0,.3);
+      padding: 0 15px;
+      color: #fff;
+      background-color: rgb(0, 115, 187);
+      cursor: pointer;
+      text-align: center;
+
+      transition: all 250ms ease-in-out;
+      text-transform: uppercase;
+
+      &:hover {
+        opacity: .7;
+        
+      }
+    }
   }
 
   .header-main-user-info {
     width: 25%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    .user-info-login {
+      text-transform: uppercase;
+
+      a {
+        cursor: pointer;
+        display: flex;
+
+        i {
+          font-size: 30px;
+          margin-right: 7px;
+          
+          &:hover {
+            color: #0073bb;
+          }
+        }
+        .user-info-login-text {
+          display: flex;
+          flex-direction: column;
+          color: rgb(51, 51, 51);
+
+          small {
+            font-weight: 400;
+            font-size: 11.2px;
+          }
+  
+          span {
+            font-weight: 600;
+            font-size: 14px;
+          }
+        }
+        &:hover {
+          .user-info-login-text, i {
+            color: #0073bb;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -34,6 +122,7 @@
 
 .header-navigation {
   border-top: 1px solid #e9e9e9;
+  border-bottom: 1px solid #e9e9e9;
 
   .header-navigation-dropdown {
     width: 25%;
@@ -321,6 +410,7 @@
     flex-wrap: wrap;
 
     .product {
+      cursor: pointer;
       width: 25%;
 
       .product-wrapper {
@@ -398,6 +488,7 @@ main {
 
 //////////// Product show page(photo and form) styles
 .product-main {
+  margin-top: 20px;
   .product-header {
     display: flex;
 
@@ -507,5 +598,139 @@ form {
 }
 
 
+/////////// Dashboard index
+
+.dashboard-index {
+  margin-top: 20px;
+
+  .first-adv {
+    display: flex;
+    width: 100%;
+
+    .first-ad-left {
+      width: 70%;
+      padding-right: 15px;
+    }
+
+    .first-ad-right {
+      display: flex;
+      width: 30%;
+
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+
+  .second-ad-row {
+    margin-top: 35px;
+    margin-bottom: 15px;
+  }
+
+  .clients-row {
+    text-align: center;
+    margin-bottom: 30px;
+
+    h2 {
+      text-transform: uppercase;
+      font-weight: 600;
+      font-style: normal;
+      color: #333;
+      font-size: 26px;
+      width: 100%;
+    }
+  }
+
+  .clients-reviews-row {
+    display: flex;
+    justify-content: space-between;
+
+    .client-review {
+      width: 20%;
+      text-align: center;
+      color: rgb(85, 85, 85);
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 22.4px;
+
+      .client-review-name {
+        font-weight: 600;
+      }
+    }
+  }
+
+  .third-ad-row {
+    margin: 35px 0 15px;
+  }
+}
+
+.login-container {
+  margin-top: 25px;
 
 
+  form {
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    padding: 4px 0;
+    color: #4285F4;
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0 0 40px;
+  }
+
+  label {
+    display: block;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+  }
+
+  input {
+    outline: none;
+    display: block;
+    background: rgba(0, 0, 0, 0.1);
+    width: 100%;
+    border: 0;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 12px 20px;
+    color: rgba(0, 0, 0, 0.6);
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 500;
+    line-height: inherit;
+    transition: 0.3s ease;
+    margin-bottom: 5px;
+
+  }
+
+  input[type="submit"] {
+    outline: none;
+    background: #4285F4;
+    width: 100%;
+    border: 0;
+    border-radius: 4px;
+    padding: 12px 20px;
+    color: #FFFFFF;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 500;
+    line-height: inherit;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+
+  a {
+    cursor: pointer;
+    color: #4285F4;
+    font-size: 15px;
+    text-decoration: none;
+    margin-bottom: 5px;
+  }
+}

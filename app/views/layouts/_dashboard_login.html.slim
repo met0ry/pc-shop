@@ -1,0 +1,13 @@
+.user-info-login
+  - if user_signed_in?
+    = link_to destroy_user_session_path, :method => :delete  do
+      i class="fa fa-user"
+      .user-info-login-text
+        small = t('dashboard.index.login.hi')
+        span = t('dashboard.index.login.log-out')
+  - else
+    = link_to new_user_session_path do
+      i class="fa fa-user"
+      .user-info-login-text
+        small = t('dashboard.index.login.hi')
+        span = t('dashboard.index.login.log-in')

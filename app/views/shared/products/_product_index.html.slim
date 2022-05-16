@@ -18,7 +18,7 @@
             = render partial: 'shared/products/product-sort-field'
         .products
           - items.each do |item|
-            .product
+            = link_to(item, class: 'product') do 
               .product-wrapper
                 .product-image
                   - if item.photo.attached?
