@@ -9,8 +9,6 @@ html
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
   body
-    p class="notice" = notice
-    p class="alert" = alert
     header
       .header-topbar
         .container
@@ -27,6 +25,10 @@ html
             .header-main-user-info
               = render partial: "layouts/dashboard_login" 
               .user-info-cart
+                = link_to "" do
+                  .user-info-cart-text
+                    i class="fa fa-shopping-cart"
+                    span = t('dashboard.index.login.cart')
               / p.navbar-text.float-right
               /   - if user_signed_in?
               /     | Logged in as 
@@ -61,6 +63,9 @@ html
                     = link_to t("header.menu.items.ram"), rams_path
                   li
                     = link_to t("header.menu.items.ssd"), ssds_path
+        .container
+          .row
+            = render partial: "shared/flash" 
 
     main
       = yield

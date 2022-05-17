@@ -1,0 +1,48 @@
+.container
+  .row
+    .checkout 
+      .customer_details
+        h3 Billing details
+        .billing-fields
+          = form_tag search_path, method: :get, autocomplete: "off" do
+            .billing_field
+              = label_tag :first_name
+              = text_field_tag :first_name
+            .billing_field
+              = label_tag :last_name
+              = text_field_tag :last_name
+            .billing_field
+              = label_tag :city
+              = text_field_tag :city
+            .billing_field
+              = label_tag :adress
+              = text_field_tag :adress
+            .billing_field
+              = label_tag :phone
+              = text_field_tag :phone
+            .billing_field
+              = label_tag :email
+              = text_field_tag :email
+      .order
+        h3.order-review-heading = t('checkout.order.title')
+        .order-review
+          table#checkout-table
+            thead
+              tr
+                th = t('checkout.order.table.product')
+                th = t('checkout.order.table.subtotal')
+
+            tbody
+              - @items.each do |item|
+                tr
+                  td.product-name = item.tag
+                  td.product-total 
+                    = item.price
+                    |  ₴ 
+
+              tr 
+                td.product-name = t('checkout.order.table.total')
+                td.product-total 
+                  = @items.reduce(0) { |sum, item| sum + item.price}
+                  |  ₴ 
+          = link_to "Order", orders_path, class: "button-order", method: :post

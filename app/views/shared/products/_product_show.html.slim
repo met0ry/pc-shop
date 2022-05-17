@@ -6,8 +6,12 @@
           = image_tag(url_for(item.photo))
         .product-header-info
           h1.product-title = item.tag
-          p.product-price = item.price
-          .buy-form        
+          p.product-price 
+            = item.price
+            |  ₴ 
+          .product-actions
+            = link_to t('buttons.buy'), add_to_cart_checkout_path(id: item.id, type: item.class), method: :post, class: "button-buy" 
+            = link_to t('buttons.add_cart'), add_to_cart_path(id: item.id, type: item.class), method: :post, class: "button-add-cart" 
       .product-description
         h2 = t('product.show.desc') + " :"
         table

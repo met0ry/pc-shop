@@ -35,12 +35,21 @@ en:
     cancel: "Cancel"
     search: "Search"
     search_placeholder: "Search for products..."
+    buy: "Buy now"
+    add_cart: "Add to cart"
+  checkout:
+    order: 
+      title: "Your order"
+      table:
+        product: "Product"
+        subtotal: "Subtotal"
   dashboard:
     index:
       login: 
         hi: "Hello,"
         log-in: "Sign In"
         log-out: "Logout"
+        cart: "Cart"
       clients:
         title: "What our clients say"
         review: "Great experience, got my order way before time. Packaging was 10/10, got all the items safe and secure. Also the items were cheaper than other websites."
